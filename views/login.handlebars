@@ -1,0 +1,31 @@
+<style>
+    body {
+        /*  background-color: #591B65; */
+        background-image: url('/img/wp-desktop3.jpg');
+
+    }
+
+    @media(max-width: 600px) {
+        body {
+            background-image: url('/img/wp-mobile2.gif');
+        }
+    }
+</style>
+
+<div class="loginArea">
+
+    <label> Login </label><br>
+    <i class="material-icons" style="font-size:36px;color:white">fingerprint</i>
+    <form action="/login" class="form-group" method="POST">
+        <input type="text" class="form-control" id="formUsername" placeholder="type your username here" name="username">
+        <input type="password" class="form-control" id="formPassword" placeholder="type your password" name="password">
+
+        <button type="submit" class="btn btn-outline-primary btn-lg" name="btnLogin"> Sig in </button>
+    </form>
+
+</div>
+
+{{#each errors}}
+<div class="alert alert-danger errorLogin">{{message}}</div>
+{{else}}
+{{/each}}

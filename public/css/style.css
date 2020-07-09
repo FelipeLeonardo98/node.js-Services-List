@@ -1,0 +1,117 @@
+/* login.handlebars */
+.loginArea
+{
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    /*padding-block: 30px;*/
+    border-radius: 12px;
+   /* box-shadow: 12px 12px 14px 6px #888888;*/
+   box-shadow: 5px 10px 8px;
+    text-align: center;
+   background-color: #81259D; 
+    width: 330px;
+    height: 450px;
+}
+
+.loginArea label
+{
+    font-size: 30px;
+    color: white;
+    font-family: Spartan;
+    margin-bottom: 5px;
+    margin-top: 12px;
+    /* Amaranth ?? */
+}
+.loginArea input
+{
+    margin-top: 15px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    font-family: Amaranth;
+}
+
+.errorLogin 
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 15px;
+    width: 30%;
+}
+
+/* admin: home.handlebars */
+.btnHomeAdmin
+{
+    text-align: center;
+}
+
+/* admin: register.handlebars */
+.formAdmin input
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.formAdmin
+{
+    text-align: center;
+    
+}
+
+/*
+.btnRegisterAdmin
+{
+    text-align: center;
+    padding-top: 15px;
+} */
+
+/* admin: update.handlebars */
+.btnActionAdmin
+{
+    text-align: center;
+    padding-top: 15px;
+}
+
+
+@media(max-width: 600px)
+{
+    table
+    {
+        width: 100%;
+    }
+    
+    .btnHomeAdmin
+    {
+       margin-left: 90px; 
+       /*  margin-left: auto;
+        margin-right: auto; */
+        width: 400px;
+	    padding-top: 15px;
+        display: block;
+    }
+
+    .loginArea
+    {
+         background-color: #3A3A3A; 
+         margin-top: 90px;
+         width: 330px;
+         height: 400px;
+    
+    }
+
+    .loginArea label
+    {
+        margin-top: 25px;
+        /* Amaranth ?? */
+    }   
+    
+    .errorLogin 
+    {
+      /*  margin-top: 15px; */
+        width: 70%;
+    }
+}

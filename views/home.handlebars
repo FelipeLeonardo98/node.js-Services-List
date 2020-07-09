@@ -1,0 +1,26 @@
+<!-- <h1>Listagem de Serviços</h1> -->
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Code</th>
+            <th scope="col">Job</th>
+            <th scope="col">Describe</th>
+            <th scope="col">Value</th>
+            <th scope="col">Date</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each jobs}}
+        <tr>
+            <th scope="row">{{id}}</th>
+            <td>{{Job}}</td>
+            <td>{{Describe}}</td>
+            <td>{{Value}}</td>
+            <td>{{#formatDate createdAt}} {{/formatDate}}</td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+
+</table>

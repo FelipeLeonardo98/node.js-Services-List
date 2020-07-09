@@ -1,0 +1,32 @@
+<h1 align="center"> Job's register </h1>
+
+<form action="/admin/added" class="form-group formAdmin" method="POST">
+    <label> Job </label>
+    <input class="form-control form-control-lg" type="text" name="registerJob" placeholder="Type your job here">
+    <br>
+
+    <label> Describe </label>
+    <input class="form-control form-control-lg" type="text" name="registerDescribe" placeholder="Describe your job">
+    <br>
+
+    <label> Value </label>
+
+
+
+    <input class="form-control form-control-lg" type="number" min="0" step="0.01" id="dinheiro" name="registerValue"
+        placeholder="R$" />
+    <!-- <input class="form-control form-control-lg" id="dinheiro form-control" type="text" placeholder="R$"> -->
+    <br>
+    <div class="btnRegisterAdmin">
+        <button type="submit" class="btn btn-success btn-lg" name="btnActionAdmin">
+            Save job <i class="fa fa-save" style="font-size:36px;"> </i>
+        </button>
+    </div>
+</form>
+
+{{#each messageRegister}}
+<div class="alert alert-success errorLogin">{{message}}</div>
+
+
+{{else}}
+{{/each}}

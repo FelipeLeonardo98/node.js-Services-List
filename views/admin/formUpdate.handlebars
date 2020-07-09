@@ -1,0 +1,31 @@
+<h1 align="center"> Job's Update </h1>
+
+<form action="/admin/update" class="form-group formAdmin" method="POST">
+    <label>Code</label>
+    <input class="form-control form-control-lg" type="number" name="updateCode" disabled="disabled" value="">
+
+
+    <label> Job </label>
+
+    <input class="form-control form-control-lg" type="text" name="updateJob" value="">
+
+
+    <br>
+
+    <label>Describe </label>
+    <input class="form-control form-control-lg" type="text" name="updateDescribe" value="">
+    <br>
+
+    <label> Value </label>
+    <input class="form-control form-control-lg" type="number" min="0" step="0.01" id="dinheiro" name="updateValue"
+        value=''>
+
+
+    <br>
+
+    <div class="btnUpdateAdmin">
+        <button type="submit" class="btn btn-success btn-lg" name="btnActionAdmin">
+            Save update <i class="fa fa-save" style="font-size:36px;"> </i>
+        </button>
+    </div>
+</form>
