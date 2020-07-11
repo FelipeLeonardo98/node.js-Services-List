@@ -4,12 +4,10 @@
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-    /*padding-block: 30px;*/
     border-radius: 12px;
-   /* box-shadow: 12px 12px 14px 6px #888888;*/
-   box-shadow: 5px 10px 8px;
+    box-shadow: 5px 10px 8px;
     text-align: center;
-   background-color: #81259D; 
+    background-color: #81259D; 
     width: 330px;
     height: 450px;
 }
@@ -22,7 +20,7 @@
     font-family: Spartan;
     margin-bottom: 5px;
     margin-top: 12px;
-    /* Amaranth ?? */
+    
 }
 .loginArea input
 {
@@ -41,12 +39,14 @@
     text-align: center;
     margin-top: 15px;
     width: 30%;
+    font-family: Spartan;
 }
 
 /* admin: home.handlebars */
 .btnHomeAdmin
 {
     text-align: center;
+    font-family: Spartan;
 }
 
 /* admin: register.handlebars */
@@ -56,25 +56,22 @@
     margin-right: auto;
     width: 80%;
     text-align: center;
+    font-family: Spartan;
 }
 
 .formAdmin label
 {
     font-weight: bold;
+    font-family: Spartan;
 }
 
 .formAdmin
 {
     text-align: center;
-    
+    font-family: Spartan;
 }
 
-/*
-.btnRegisterAdmin
-{
-    text-align: center;
-    padding-top: 15px;
-} */
+
 
 /* admin: update.handlebars */
 .btnActionAdmin
@@ -94,10 +91,7 @@
     .btnHomeAdmin
     {
        margin-left: 90px; 
-       /*  margin-left: auto;
-        margin-right: auto; */
         width: 400px;
-       /* padding-top: 5px; */
        padding-bottom: 15px;
         display: block;
     }
@@ -114,12 +108,11 @@
     .loginArea label
     {
         margin-top: 25px;
-        /* Amaranth ?? */
+        font-family: Spartan;
     }   
     
     .errorLogin 
     {
-      /*  margin-top: 15px; */
         width: 70%;
     }
 
