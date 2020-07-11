@@ -14,6 +14,7 @@
     height: 450px;
 }
 
+
 .loginArea label
 {
     font-size: 30px;
@@ -54,6 +55,12 @@
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+    text-align: center;
+}
+
+.formAdmin label
+{
+    font-weight: bold;
 }
 
 .formAdmin
@@ -90,7 +97,8 @@
        /*  margin-left: auto;
         margin-right: auto; */
         width: 400px;
-	    padding-top: 15px;
+       /* padding-top: 5px; */
+       padding-bottom: 15px;
         display: block;
     }
 
@@ -113,5 +121,16 @@
     {
       /*  margin-top: 15px; */
         width: 70%;
+    }
+
+    
+}
+
+
+@media(min-width: 1000px)
+{
+    #btnLoginDetail
+    {
+        color: white;
     }
 }

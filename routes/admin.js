@@ -44,7 +44,7 @@ router.post('/added', (req, res) => {
         Describe: req.body.registerDescribe,
         Value: req.body.registerValue
     }).then(function () {
-        messageRegister.push({ message: "Post registered with successfully!" });
+        messageRegister.push({ message: "Job registered with successfully!" });
         res.render('../views/admin/register', { messageRegister: messageRegister });
     }).catch(function (fail) {
         messageRegister.push({ message: "Ops, a fail has been ocurred... " + fail });
@@ -56,9 +56,34 @@ router.get('/update/:id', async (req, res) => {
     const selectedJob = await Job.findOne({ where: { id: req.params.id } });
     // Filtrando os dados antes de mandar para View
     //res.json(selectedJob);
-    res.render("./admin/formUpdate", { selectedJob: selectedJob });
+    res.render("./admin/formUpdate", { id: selectedJob.id, job: selectedJob.Job, describe: selectedJob.Describe, value: selectedJob.Value });
     //console.log(selectedJob);
 })
+
+router.post('/updatingSuccess', (req, res) => {
+    var messageUpdate = [];
+
+    Job.update(
+        {
+            Job: req.body.updateJob,
+            Describe: req.body.updateDescribe,
+            Value: req.body.updateValue
+        },
+        { where: { 'id': req.body.updateCode } }).then(function () {
+            messageUpdate.push({
+                message: "Job updated with success!"
+            });
+            res.render('../views/admin/formUpdate', { messageUpdate });
+        }).catch(function (fail) {
+            messageUpdate.push({ message: "We asked apologizes, by error: " + fail });
+            res.render('../views/admin/formUpdate', { messageUpdate })
+        })
+    //  res.send(" " + req.body.updateCode + " " + req.body.updateJob + " " + req.body.updateDescribe + " " + req.body.updateValue);
+
+})
+
+
+
 router.get('/deleted/:id', (req, res) => {
     Job.destroy({ where: { 'id': req.params.id } }).then(() => {
         res.redirect('/admin/');
